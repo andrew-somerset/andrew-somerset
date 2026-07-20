@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 400" width="454" height="400" role="img" aria-label="About Andrew Somerset">
+<style>
+ .l{opacity:0;animation:in .5s ease-out forwards}
+ @keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+</style>
+<rect width="454" height="400" rx="8" fill="#0d1117" stroke="#30363d"/>
+<circle cx="22" cy="22" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="22" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="22" r="6" fill="#27c93f"/>
+<text x="434" y="27" text-anchor="end" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#7d8590">neofetch</text>
+<text class="l" x="22" y="72" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" font-weight="bold" fill="#39d353" style="animation-delay:200ms">andrew@github</text>
+<text class="l" x="22" y="94" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14" fill="#7d8590" style="animation-delay:330ms">-------------</text>
+<text class="l" x="22" y="116" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:460ms"><tspan fill="#58a6ff" font-weight="bold">Now</tspan><tspan fill="#7d8590">......</tspan> <tspan fill="#c9d1d9">Analytics + CS @ Columbia Engineering</tspan></text>
+<text class="l" x="22" y="138" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:590ms"><tspan fill="#58a6ff" font-weight="bold">Focus</tspan><tspan fill="#7d8590">....</tspan> <tspan fill="#c9d1d9">AI systems for better decisions</tspan></text>
+<text class="l" x="22" y="160" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:720ms"><tspan fill="#58a6ff" font-weight="bold">Base</tspan><tspan fill="#7d8590">.....</tspan> <tspan fill="#c9d1d9">New York City</tspan></text>
+<text class="l" x="22" y="204" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:980ms"><tspan fill="#58a6ff" font-weight="bold">Building</tspan><tspan fill="#7d8590">.</tspan> <tspan fill="#c9d1d9">blue_pill — an autonomous agent given</tspan></text>
+<text class="l" x="22" y="226" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#c9d1d9" xml:space="preserve" style="animation-delay:1110ms">         $100 of compute to stay alive</text>
+<text class="l" x="22" y="248" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:1240ms"><tspan fill="#58a6ff" font-weight="bold">Research</tspan><tspan fill="#7d8590">.</tspan> <tspan fill="#c9d1d9">ML for smart manufacturing (w/ Dr. Zhang)</tspan></text>
+<text class="l" x="22" y="292" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:1500ms"><tspan fill="#58a6ff" font-weight="bold">Stack</tspan><tspan fill="#7d8590">....</tspan> <tspan fill="#c9d1d9">Python · PyTorch · pandas · scikit-learn</tspan></text>
+<text class="l" x="22" y="314" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#c9d1d9" xml:space="preserve" style="animation-delay:1630ms">         Gurobi/OR · TypeScript · React · SQL</text>
+<text class="l" x="22" y="358" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" xml:space="preserve" style="animation-delay:1890ms"><tspan fill="#58a6ff" font-weight="bold">Links</tspan><tspan fill="#7d8590">....</tspan> <tspan fill="#c9d1d9">linkedin.com/in/andrew-somerset</tspan></text>
+<text class="l" x="22" y="380" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#c9d1d9" xml:space="preserve" style="animation-delay:2020ms">         x.com/AndrewSomerset_</text>
+<rect x="22" y="392" width="9" height="16" fill="#39d353"><animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="2.15s" repeatCount="indefinite"/></rect>
+</svg>
