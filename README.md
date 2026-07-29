@@ -2,7 +2,6 @@
 
 ### I enjoy building things that help people
 
-Researching, prototyping, and shipping products at the intersection of intelligence, optimization, and software.
+Specifically at the intersection of intelligence, optimization, and software.
 
-#### Hey, I'm Andrew.
 #### Always happy to discuss startups, AI/ML, agents, research, sports, or ambitious ideas.
