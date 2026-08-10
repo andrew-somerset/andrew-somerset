@@ -8,12 +8,11 @@
 
 <h3><code>andrew@github ~ $ whoami</code></h3>
 
-<table>
-<tr>
-<td valign="top"><img src="./andrew-somerset-profile-repo/portrait.svg" width="370" alt="Andrew Somerset" /></td>
-<td valign="top"><img src="./andrew-somerset-profile-repo/info-card.svg" width="454" alt="About Andrew" /></td>
-</tr>
-</table>
+<img src="./andrew-somerset-profile-repo/andrew-ascii.svg" width="824" alt="ASCII portrait of Andrew Somerset" />
+
+<br><br>
+
+<img src="./andrew-somerset-profile-repo/info-card.svg" width="454" alt="About Andrew" />
 
 <br>
 
