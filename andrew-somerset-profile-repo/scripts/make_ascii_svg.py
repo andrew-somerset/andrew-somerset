@@ -29,12 +29,18 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "andrew-ascii.svg"
 
 RAMP = " .:-=+*oa%#@"           # light -> heavy ink coverage
-COLS = int(__import__("os").environ.get("ASCII_COLS", 100))
+# The card sits in a two-up row beside info-card.svg and is displayed at 370px.
+# Fewer columns means each glyph survives that downscale: at 100 cols a glyph
+# lands under 4px wide and the face turns to mush, at 66 it stays ~5.3px.
+COLS = int(__import__("os").environ.get("ASCII_COLS", 66))
 ROWS = round(COLS * 7.2 / 13)
 CHAR_W, CHAR_H = 7.2, 13         # monospace cell, SVG units
 FONT_SIZE = 12
 GRID_X, GRID_Y = 12, 52          # top-left of the character grid
 PAD_BOTTOM = 24
+# Pad the card out to 370:400 so it ends up exactly as tall as info-card.svg
+# (454x400 shown at 454) and the two cells line up top and bottom.
+TARGET_ASPECT = 370 / 400
 FONT = "SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace"
 
 # On a dark card the glyphs are the light source, so brightness drives BOTH
@@ -45,7 +51,8 @@ TIERS = [(0.34, "#8b949e"), (0.62, "#b1bac4"), (1.01, "#e6edf3")]
 INVERT = bool(int(__import__("os").environ.get("ASCII_INVERT", 1)))
 CONTRAST_GAMMA = 1.10
 INK_FLOOR = 0.11     # nothing inside the cutout is allowed to be blank
-FADE_ROWS = 14       # rows over which the shirt dissolves into the card
+FADE_ROWS = max(4, round(ROWS * 0.20))   # proportional: a fixed count ate
+                                         # half the card once ROWS dropped
 
 FLY_IN = 96.0        # px each row travels
 TOTAL_S = 3.4        # one shared timeline for every row
@@ -61,8 +68,8 @@ def square_crop(img_bgr: np.ndarray) -> np.ndarray:
     h, w = img_bgr.shape[:2]
     if len(faces):
         fx, fy, fw, fh = max(faces, key=lambda f: f[2] * f[3])
-        side = int(fw * 2.05)
-        left, top = fx + fw // 2 - side // 2, int(fy - fh * 0.50)
+        side = int(fw * 1.62)
+        left, top = fx + fw // 2 - side // 2, int(fy - fh * 0.42)
     else:
         side = int(w * 0.9)
         left, top = (w - side) // 2, int(h * 0.06)
@@ -165,7 +172,9 @@ def main() -> None:
     rows = len(grid)
 
     w = round(COLS * CHAR_W + 2 * GRID_X)
-    h = round(GRID_Y + rows * CHAR_H + PAD_BOTTOM)
+    natural_h = round(GRID_Y + rows * CHAR_H + PAD_BOTTOM)
+    h = max(natural_h, round(w / TARGET_ASPECT))
+    top = GRID_Y + (h - natural_h) // 2      # centre the grid in the padded card
 
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
          f'width="{w}" height="{h}" role="img" aria-label="ASCII portrait of Andrew Somerset">',
@@ -180,7 +189,7 @@ def main() -> None:
         if not "".join(chars).strip():
             continue
 
-        y = GRID_Y + (r + 1) * CHAR_H - 3
+        y = top + (r + 1) * CHAR_H - 3
         body = "".join(
             f'<tspan fill="{TIERS[t][1]}">{esc(txt)}</tspan>'
             for txt, t in runs(chars, tiers))
